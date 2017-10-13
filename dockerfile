@@ -6,7 +6,11 @@ RUN apt-get update -y
 
 RUN apt-get install php -y
 
-ADD * /usr/share/nginx/html/
+RUN apt-get install git -y
+
+RUN git clone https://github.com/kssanthosh/dockerproject.git
+
+COPY  /usr/share/nginx/html/
 
 RUN /etc/init.d/nginx restart
 
