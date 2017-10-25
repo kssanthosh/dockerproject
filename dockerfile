@@ -10,7 +10,7 @@ RUN apt-get install git -y
 
 RUN git clone https://github.com/kssanthosh/dockerproject.git
 
-COPY  /usr/share/nginx/html/
+COPY dockerproject/* /usr/share/nginx/html/
 
 RUN /etc/init.d/nginx restart
 
